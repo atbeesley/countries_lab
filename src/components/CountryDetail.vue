@@ -1,5 +1,5 @@
 <template lang="html">
-  <div v-if="country">
+  <div v-if="country" class="detailbox">
     <h3> {{ country.name }}</h3>
     <h4> {{ country.capital }}</h4>
     <h4> {{ country.population }} </h4>
@@ -7,6 +7,10 @@
     <img 
     :src="`${country.flag}`"   
     :alt="`Flag of ${country.name}`"
+    :class="flag"
+    style="  
+    max-width: 30em;
+    max-height: 20em;"
     ></v-img> 
   </div>
 </template>
@@ -20,4 +24,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.detailbox{
+  padding-top: 1em;
+  margin-left: -500px;
+}
 </style>
