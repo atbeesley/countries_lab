@@ -3,6 +3,7 @@
     <h3> {{ country.name }}</h3>
     <h4> {{ country.capital }}</h4>
     <h4> {{ country.population }} </h4>
+    <h4>The inhabitants are known as {{country.demonym}}s.</h4>   
   </div>
 </template>
 
