@@ -1,10 +1,11 @@
 <template lang="html">
   <div v-if="country" class="detailbox">
     <h3> {{ country.name }}</h3>
-    <h4> Capital: {{ country.capital }}</h4>
+    <h4 v-if="country.capital"> Capital: {{ country.capital }}</h4>
     <h4> Population: {{ country.population }} </h4>
-    <h4>It is located somewhere deep in the {{country.region}} region.</h4>
+    <h4 v-if="country.region">It is located somewhere deep in the {{country.region}} region.</h4>
     <h4 v-if="country.demonym">The inhabitants are known as {{country.demonym}}s.</h4>  
+    <h4 v-if="country.languages">The locals speak {{country.languages[2].name}}.</h4>
     <img 
     :src="`${country.flag}`"   
     :alt="`Flag of ${country.name}`"
