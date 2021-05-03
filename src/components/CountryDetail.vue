@@ -26,12 +26,15 @@ export default {
   name: "country-detail",
   props: ["country"]
 }
-
 </script>
 
 <style lang="css" scoped>
 .detailbox{
   padding-top: 1em;
-  margin-left: -500px;
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
 }
 </style>
