@@ -8,7 +8,7 @@
     <li v-if="country.region"><p v-if="country.region">It is located somewhere in the {{country.region}} region.</p></li>
     <li v-if="country.demonym"><p v-if="country.demonym">The inhabitants are known as {{country.demonym}}s.</p></li>
     <li  v-if="country.languages"><p v-if="country.languages">The locals parley in {{country.languages[0].name}}.</p></li>
-    <!-- </li><p v-if="typeof country.regionalBlocs !== undefined">It belongs to the {{country.regionalBlocs[0].name}}.</p></li> -->
+    <li v-if="country.regionalBlocs[0]"><p v-if="country.regionalBlocs[0]">It belongs to the {{country.regionalBlocs[0].name}}.</p></li>
     </ul>
     <img 
     :src="`${country.flag}`"   
