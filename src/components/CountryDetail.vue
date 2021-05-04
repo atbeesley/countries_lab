@@ -9,6 +9,8 @@
     <li v-if="country.demonym"><p v-if="country.demonym">The demonym for someone from {{ country.name }} is "{{country.demonym}}".</p></li>
     <li  v-if="country.languages"><p v-if="country.languages">The locals parley in {{country.languages[0].name}}.</p></li>
     <li v-if="country.regionalBlocs[0]"><p v-if="country.regionalBlocs[0]">It belongs to the {{country.regionalBlocs[0].name}}.</p></li>
+    <li v-if="country.currencies[0]"><p v-if="country.currencies[0]">{{ country.name }}'s official currency is the {{country.currencies[0].name}}.</p></li>
+
     </ul>
     <img 
     :src="`${country.flag}`"   
