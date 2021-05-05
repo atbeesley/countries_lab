@@ -5,12 +5,13 @@
     <p>Population: {{ country.population }} </p>
     <h3>Some tasty factoids about {{ country.name }}:</h3>
     <ul>
-    <li v-if="country.region"><p v-if="country.region">It is located somewhere in the {{country.region}} region.</p></li>
-    <li v-if="country.demonym"><p v-if="country.demonym">The demonym for someone from {{ country.name }} is "{{country.demonym}}".</p></li>
-    <li  v-if="country.languages"><p v-if="country.languages">The locals parley in {{country.languages[0].name}}.</p></li>
-    <li v-if="country.regionalBlocs[0]"><p v-if="country.regionalBlocs[0]">It belongs to the {{country.regionalBlocs[0].name}} (also known as the {{country.regionalBlocs[0].acronym}}).</p></li>
-    <li v-if="country.currencies[0]"><p v-if="country.currencies[0]">{{ country.name }}'s official currency is the {{country.currencies[0].name}}.</p></li>
-
+    <li v-if="country.region">It is located somewhere in the {{country.region}} region.</li>
+    <li v-if="country.demonym">The demonym for someone from {{ country.name }} is "{{country.demonym}}".</li>
+    <li  v-if="country.languages">The locals parley in the following language(s):</li>
+      <ol>
+      <li v-for="(language, index) in country.languages">{{country.languages[index].name}}</li>
+      </ol>
+    <li v-if="country.regionalBlocs[0]">It belongs to the {{country.regionalBlocs[0].name}} (also known as the {{country.regionalBlocs[0].acronym}}).</li>
     </ul>
     <img 
     :src="`${country.flag}`"   
@@ -26,7 +27,7 @@
 <script>
 export default {
   name: "country-detail",
-  props: ["country"]
+  props: ["country"],
 }
 </script>
 
