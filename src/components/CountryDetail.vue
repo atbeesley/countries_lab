@@ -11,6 +11,7 @@
       <ol>
       <li v-for="(language, index) in country.languages">{{country.languages[index].name}}</li>
       </ol>
+    <li  v-if="country.languages">{{country.name}} is known to its people as {{country.nativeName}} in their local language. </li>
     <li v-if="country.regionalBlocs[0]">It belongs to the {{country.regionalBlocs[0].name}} (also known as the {{country.regionalBlocs[0].acronym}}).</li>
     </ul>
     <img 
