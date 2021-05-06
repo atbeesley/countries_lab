@@ -6,6 +6,7 @@
         {{ country.name }}
       </option>
     </select>
+      <h3 v-if="!selectedCountry">Pick a country to see its factoids...</h3> 
   </div>
 </template>
 
