@@ -3,9 +3,9 @@
     <h2>{{ country.name }}</h2>
     <p v-if="country.capital"> Capital: {{ country.capital }}</p>
     <p>Population: {{ country.population }} </p>
-    <h3>Some tasty factoids about {{ country.name }}:</h3>
+    <h3>Some tasty facts about {{ country.name }}:</h3>
     <ul>
-    <li v-if="country.region">It is located somewhere in the {{country.region}} region.</li>
+    <li v-if="country.region">It is located somewhere in the {{country.region}} region<span v-if="country.subregion"> - in the {{country.subregion}} region, to be more precise</span>.</li>
     <li v-if="country.demonym">The demonym for someone from {{ country.name }} is "{{country.demonym}}".</li>
     <li  v-if="country.languages">The locals parley in the following language(s):</li>
       <ol>
