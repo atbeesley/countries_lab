@@ -1,4 +1,4 @@
-# countries_lab
+# countries
 
 ## Project setup
 ```
